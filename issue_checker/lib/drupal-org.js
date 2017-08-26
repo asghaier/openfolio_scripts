@@ -21,7 +21,7 @@ const httpOptions = {
   url: 'https://www.drupal.org/api-d7/node.json',
   headers: {
     'Accept': 'application/json',
-    'User-Agent': 'Patchchecker/1.1.0 (alexander@goalgorilla.com)'
+    'User-Agent': 'Patchchecker/1.1.0 (alexander@asghaier.com)'
   },
   json: true,
   transform2xxOnly: true

@@ -1,5 +1,5 @@
 {
-    "name": "goalgorilla/openfolio_scripts",
+    "name": "asghaier/openfolio_scripts",
     "description": "Repo that contains scripts for Openfolio that are not generic enough to be in the distro repo (e.g. docker scripts).",
     "type": "drupal-drush",
     "keywords": [
@@ -8,7 +8,7 @@
         "Scripts"
     ],
     "license": "GPL-2.0+",
-    "homepage": "https://github.com/goalgorilla/openfolio_scripts",
+    "homepage": "https://github.com/asghaier/openfolio_scripts",
     "minimum-stability": "dev",
     "require": {
         "composer/installers": "^1.0"

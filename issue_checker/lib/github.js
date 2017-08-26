@@ -4,7 +4,7 @@ const httpOptions = {
   url: 'https://api.github.com/repos/:project/pulls/:number',
   headers: {
     'Accept': 'application/vnd.github.v3+json',
-    'User-Agent': 'Patchchecker/1.1.0 (alexander@goalgorilla.com)'
+    'User-Agent': 'Patchchecker/1.1.0 (alexander@asghaier.com)'
   },
   json: true,
   transform2xxOnly: true

@@ -19,6 +19,6 @@ then
       -H "Travis-API-Version: 3" \
       -H "Authorization: token $ACCESS_TOKEN" \
       -d "$body" \
-      https://api.travis-ci.org/repo/goalgorilla%2F$REPO/requests
+      https://api.travis-ci.org/repo/asghaier%2F$REPO/requests
 
 fi
