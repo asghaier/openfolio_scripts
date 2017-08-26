@@ -14,7 +14,7 @@ fn_sleep() {
   fi
 }
 
-# Set the correct settings.php requires scripts folder to be mounted in /var/www/scripts/social.
+# Set the correct settings.php requires scripts folder to be mounted in /var/www/scripts/openfolio.
 chmod 777 /var/www/html/sites/default
 
 if [ -f /var/www/html/sites/default/settings.php ]; then
@@ -33,15 +33,15 @@ if [ -f /var/www/html/sites/default/drushrc.php ]; then
   rm /var/www/html/sites/default/drushrc.php
 fi
 
-cp /var/www/scripts/social/install/default.settings.php /var/www/html/sites/default/default.settings.php
+cp /var/www/scripts/openfolio/install/default.settings.php /var/www/html/sites/default/default.settings.php
 
 # Only add the drushrc file when the VIRTUAL HOST is set.
 if [[ "$VIRTUAL_HOST" != "" ]]; then
   # Copy the default drushrc.php file and try to replace VIRTUAL_HOST var.
-  sed "s/VHOST/$VIRTUAL_HOST/g" /var/www/scripts/social/install/default.drushrc.php > /var/www/html/sites/default/drushrc.php
+  sed "s/VHOST/$VIRTUAL_HOST/g" /var/www/scripts/openfolio/install/default.drushrc.php > /var/www/html/sites/default/drushrc.php
 fi
 
-drush -y site-install social --db-url=mysql://root:root@db:3306/social --account-pass=admin install_configure_form.update_status_module='array(FALSE,FALSE)' --site-name='Open Social';
+drush -y site-install openfolio --db-url=mysql://root:root@db:3306/openfolio --account-pass=admin install_configure_form.update_status_module='array(FALSE,FALSE)' --site-name='Openfolio';
 fn_sleep
 echo "installed drupal"
 if [[ $NFS != "nfs" ]]
@@ -65,13 +65,13 @@ chmod 777 -R sites/default/files
 
 fn_sleep
 echo "settings.php and files directory permissions"
-drush pm-enable social_demo -y
+drush pm-enable openfolio_demo -y
 fn_sleep
 echo "enabled module"
 drush cc drush
 drush sda file user group topic event eventenrollment post comment like # Add the demo content
 #drush sdr like eventenrollment topic event post comment group user file # Remove the demo content
-drush pm-uninstall social_demo -y
+drush pm-uninstall openfolio_demo -y
 fn_sleep
 echo "flush image caches"
 drush cc drush
@@ -92,5 +92,5 @@ drush php-eval 'drush_search_api_reset_tracker();';
 # development modules e.g. pause nfs dev.
 if [[ $DEV == "dev" ]]
 then
-  drush en social_devel -y
+  drush en openfolio_devel -y
 fi

@@ -28,5 +28,5 @@ npm install -g n
 n stable
 npm i -g eslint
 
-# Run it, and output to: social.dev/pareview.html
-pareview.sh /var/www/html/profiles/contrib/social/ > /var/www/html/pareview.html
+# Run it, and output to: openfolio.dev/pareview.html
+pareview.sh /var/www/html/profiles/contrib/openfolio/ > /var/www/html/pareview.html

@@ -22,7 +22,7 @@ else
   TAGS="$TAGS&&~DS-2082&&~DS-816"
 fi
 
-PROJECT_FOLDER=/var/www/html/profiles/contrib/social/tests/behat
+PROJECT_FOLDER=/var/www/html/profiles/contrib/openfolio/tests/behat
 
 /var/www/vendor/bin/behat --version
 

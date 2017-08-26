@@ -2,8 +2,8 @@
 
 # Script which checks for feature state in Drupal.
 # Usage: bash check-feature-state.sh bundle
-# E.g. for checking features in bundle social:
-# bash check-feature-state.sh social
+# E.g. for checking features in bundle openfolio:
+# bash check-feature-state.sh openfolio
 
 # Set bundle var.
 BUNDLE=$1
